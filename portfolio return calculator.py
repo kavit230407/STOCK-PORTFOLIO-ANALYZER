@@ -29,7 +29,7 @@ def cal_total_returns(prices):
 def risk_indicator(prices):
     returns=cal_daily_returns(prices)
     if not returns:
-        return 'INSUFFICENT DATA'
+        return 'INSUFFICIENT DATA'
     for r in returns:
         if r< Decimal('-0.30'):
             return 'HIGH VOLATILITY'
@@ -74,6 +74,7 @@ weights = [0.4, 0.3, 0.3]
 portfolio_return = cal_portfolio_return(total_returns, weights)
 print(f'portfolio return:{float(portfolio_return*100):0.2f}%')
 print(investment_analysis(total_returns, weights))
+
 
 
 
