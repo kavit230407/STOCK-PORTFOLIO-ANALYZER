@@ -44,3 +44,4 @@ Built with
 Python (Udemy Complete Python Bootcamp by Jose Portilla – certificate earned)
 ### Example Output
 ![Project Output](screenshot.png)
+<img width="959" height="767" alt="screenshot (2)" src="https://github.com/user-attachments/assets/ea0013b2-7b21-4b31-bf58-e75f92083f91" />
