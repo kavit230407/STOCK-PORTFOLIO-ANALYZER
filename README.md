@@ -50,7 +50,7 @@ print(investment_analysis(total_returns, [0.4, 0.3, 0.3]))
 print(best_worst_stock(total_returns))
 print(risk_indicator(daily_returns))  # fix this function first
 
-# How to Run Stock Analysis Tool
+### HOW TO RUN STOCK ANALYSIS TOOL
 df=analysis_of_stock('RELIANCE.NS')
 print(f'ANALYSIS OF STOCK: RELIANCE.NS\nFROM:{df.first_valid_index()} TO:{df.last_valid_index()}')
 print(f'AVG DAILY RETURN:{df['daily return'].mean()*100:0.2f}%\nAVG INTRADAY RETURN:{df['intraday return'].mean()*100:.2f}%')
@@ -89,7 +89,7 @@ Python (Udemy Complete Python Bootcamp by Jose Portilla – certificate earned)
 ### Example Output
 ![Project Output](screenshot.png)
 <img width="959" height="767" alt="screenshot (2)" src="https://github.com/user-attachments/assets/ea0013b2-7b21-4b31-bf58-e75f92083f91" />
-![Project Output](screenshot.png2)
+![Project Output](screenshot2.png)
 
-screenshot.png2<img width="855" height="910" alt="Screenshot 2026-02-16 143340" src="https://github.com/user-attachments/assets/7947422b-6684-44a5-b816-ff5a2ab2d282" />
+<img width="855" height="910" alt="Screenshot 2026-02-16 143340" src="https://github.com/user-attachments/assets/7947422b-6684-44a5-b816-ff5a2ab2d282" />
 
