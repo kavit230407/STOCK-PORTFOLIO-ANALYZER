@@ -1,4 +1,4 @@
-# Portfolio Return Calculator & Stock Analysis Tool
+# STOCK & PORTFOLIO ANALYZER
 
 A Python project for stock market analysis using real-time data from Yahoo Finance (yfinance) and pandas.
 
