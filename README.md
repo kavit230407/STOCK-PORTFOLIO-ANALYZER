@@ -1,33 +1,40 @@
-# Portfolio Return Calculator
+# Portfolio Return Calculator & Stock Analysis Tool
 
-A basic Python tool I built to calculate daily/total stock returns, portfolio weighted return, and a simple risk indicator.
-# STOCK ANALYSIS TOOL
-a basic tool that gives you the analysis of the given stock of last 60 days 
+A Python project for stock market analysis using real-time data from Yahoo Finance (yfinance) and pandas.
 
+This repo contains **two separate tools**:
 
-### Features Portfolio return Calculator
-- Precise calculations using `decimal.Decimal` (no float rounding errors)
-- Input validation (list type, length ≥2, positive prices)
-- Weighted portfolio return with length & sum checks
-- Basic risk flag (high volatility if any day < -30%)
-- Safe error handling with messages
-- using yfinance real world data
+1. **Portfolio Return Calculator** — Multi-stock portfolio analysis with weighting  
+2. **Stock Analysis Tool** — Deep single-stock analysis with returns, volatility, monthly trends, and basic advice
 
-# Features of Stock Analysis Tool
--Calculation of Avegrage Daily return
--Calculation of Average Intraday return
--Precise Percentage of Volatile and Non Volatile Days
--Assesment of Volatilty Status Based on Percentage Of Volatile and Non Volatile days
--Max and Min price of Last 60 Days
--Best and Worst Day Based on Intraday return
--Monthly returns
--Total return
--Performance Analysis Based on Total return
--Basic Advice Based on Performance
- 
-### How to Run Portfolio Return Calculator
-```python
-# Fetch
+## Features
+
+### Portfolio Return Calculator
+- Fetches live historical data for multiple stocks (Reliance, HDFC Bank, TCS)
+- Calculates:
+  - Daily returns
+  - Total returns
+  - Portfolio return (weighted average)
+  - Volatility status
+
+### Stock Analysis Tool
+- Analyzes any single stock symbol
+- Calculates:
+  - Daily & intraday returns
+  - Best and Worst day Based on intraday return
+  - Precise percentage of no of days being volatile and non volatile
+  - Volatility classification (high/low)
+  - Monthly returns (based on last closing price)
+  - Performance rating (WEAK / DECENT / GOOD)
+  - Basic investment advice
+
+## Technologies Used
+- Python 3
+- yfinance — real-time stock data fetch
+- pandas — data manipulation & analysis
+- 
+# HOW TO RUN PORTFOLIO RETURN CALCULATOR
+
 reliance = get_prices('RELIANCE.NS')
 hdfc = get_prices('HDFCBANK.NS')
 tcs = get_prices('TCS.NS')
@@ -50,7 +57,10 @@ print(investment_analysis(total_returns, [0.4, 0.3, 0.3]))
 print(best_worst_stock(total_returns))
 print(risk_indicator(daily_returns))  # fix this function first
 
-### HOW TO RUN STOCK ANALYSIS TOOL
+print('start date: 11/1/2026   end date: 21/01/2026')
+
+# HOW TO RUN STOCK ANALYSIS TOOL
+
 df=analysis_of_stock('RELIANCE.NS')
 print(f'ANALYSIS OF STOCK: RELIANCE.NS\nFROM:{df.first_valid_index()} TO:{df.last_valid_index()}')
 print(f'AVG DAILY RETURN:{df['daily return'].mean()*100:0.2f}%\nAVG INTRADAY RETURN:{df['intraday return'].mean()*100:.2f}%')
@@ -75,21 +85,14 @@ performance=performance_analysis(total_return)
 
 print(f'ADVICE:{investment_guide(performance)}')
 
-### What I Learned
+# JOURNEY
+"Started with my own idea and code, wrote 60–80 lines per session myself. Got stuck on some bugs & polish points — Grok helped me fix them, make it more robust, and write cleaner pandas code.
+"Used Grok (xAI) as a coding assistant for debugging and polish — similar to how developers use GitHub Copilot or Claude today.
 
-Why float is dangerous for money → switched to Decimal
-Importance of input validation to prevent crashes/wrong results
-Iterative improvement based on feedback by grok made the core myself taken help to polish my project
- How to run your opreations faster using pandas
-How to integrate yfinance and pandas for better result
-How to use iat in built method of python so that we could get numeric total return instead of series 
+# PORTFOLIO RETURN CALCULATOR OUTPUT
 
-Built with
-Python (Udemy Complete Python Bootcamp by Jose Portilla – certificate earned)
-### Example Output
-![Project Output](screenshot.png)
-<img width="959" height="767" alt="screenshot (2)" src="https://github.com/user-attachments/assets/ea0013b2-7b21-4b31-bf58-e75f92083f91" />
-![Project Output](screenshot2.png)
+<img width="959" height="767" alt="screenshot (2)" src="https://github.com/user-attachments/assets/97da5831-28f4-4a69-ae12-072f99677dcd" />
 
-<img width="855" height="910" alt="Screenshot 2026-02-16 143340" src="https://github.com/user-attachments/assets/7947422b-6684-44a5-b816-ff5a2ab2d282" />
+# STOCK ANALYSIS TOOL OUTPUT
 
+<img width="855" height="910" alt="screenshot2" src="https://github.com/user-attachments/assets/cf10e788-9b0d-4508-bf6d-472fa25b5272" />
